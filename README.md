@@ -15,10 +15,8 @@ https://cloud.yandex.ru/marketplace/products/f2eokige6vtlf94uvgs2
 Сервисный аккаунт с ролями:
 
 - storage.editor
-- 
 - kms.keys.encrypterDecrypter
-- 
- -container-registry.images.puller
+- container-registry.images.puller
  
 В сервисном аккауте создаем статический  ключ доступа  
 
@@ -52,4 +50,4 @@ YANDEXCLOUD_KMS_KEY_ID   ключ kms
 
 Дополнительно можно скачав бинарник Vault
 и работать с Serverless Vault локально используя переменую окружения
-export VAULT_ADDR= containerlink
+export VAULT_ADDR= <Ссылка для вызова>
