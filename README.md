@@ -9,23 +9,30 @@ https://cloud.yandex.ru/marketplace/products/f2eokige6vtlf94uvgs2
 ПОДГОТОВКА
 
 Создаем бакет
+
 Создаем ключ KMS
+
 Сервисный аккаунт с ролями:
+
 - storage.editor
+- 
 - kms.keys.encrypterDecrypter
+- 
  -container-registry.images.puller
+ 
 В сервисном аккауте создаем статический  ключ доступа  
 
 
 Создаем Serverless Container
 
 включаем публичную ссылку
+
 VCPU 1
+
 RAM 256 Mb
-Сервисный аккаунт с ролями:
-- storage.editor
-- kms.keys.encrypterDecrypter
- -container-registry.images.puller
+
+Сервисный аккаунт с ролями: 
+storage.editor kms.keys.encrypterDecrypter container-registry.images.puller
 
 
 Добавляем контейнеру переменнные окружения
