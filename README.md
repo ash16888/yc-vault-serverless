@@ -1,7 +1,7 @@
 # Yandex Cloud Serverless Vault KMS AutoUnseal
 
 Для создания Serverless контейенера нам понадобится кастомный образ Hashicorp Vault от Yandex Cloud
-https://cloud.yandex.ru/marketplace/products/f2eokige6vtlf94uvgs2
+https://cloud.yandex.ru/marketplace/products/f2ee8e5cgllr7f8pp79k
 
 Добавим конфиг в котором прописан   Object Storage (S3) в качестве бэкенда, и unseal с помощью Yandex KMS.
 Собираем образ и пушим его в Container Registry. 
