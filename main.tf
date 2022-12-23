@@ -5,7 +5,7 @@ resource "yandex_kms_symmetric_key" "this" {
   rotation_period   = "8760h" # 1 year.
 }
 ### Bucket
-resource "yandex_storage_bucket" "vault" {
+resource "yandex_storage_bucket" "this" {
   bucket        = "vault-${var.yc_folder_id}"
   folder_id     = var.yc_folder_id
   access_key    = yandex_iam_service_account_static_access_key.this.access_key
