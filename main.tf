@@ -16,7 +16,7 @@ resource "yandex_storage_bucket" "this" {
 
 ## Serverless container
 resource "yandex_serverless_container" "this" {
-  name               = "vault"
+  name               = "vault-${var.yc_folder_id}"
   description        = "Serverless Vault"
   memory             = 256
   execution_timeout  = "15s"
@@ -26,7 +26,7 @@ resource "yandex_serverless_container" "this" {
   image {
     url = "cr.yandex/crpdouee2epesrtliguv/vaultsls:1.11.5"
     environment = {
-      AWS_S3_BUCKET          = yandex_storage_bucket.vault.bucket
+      AWS_S3_BUCKET          = yandex_storage_bucket.this.bucket
       AWS_ACCESS_KEY_ID      = yandex_iam_service_account_static_access_key.this.access_key
       AWS_SECRET_ACCESS_KEY  = yandex_iam_service_account_static_access_key.this.secret_key
       YANDEXCLOUD_KMS_KEY_ID = yandex_kms_symmetric_key.this.id
